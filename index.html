@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome Dashboard</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #1d3557, #457b9d);
+      color: #f1faee;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 40px 60px;
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+      backdrop-filter: blur(10px);
+      max-width: 600px;
+    }
+    h1 {
+      font-size: 2.8rem;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+    p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      font-weight: 400;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>🚀 Welcome to Your Dashboard</h1>
+    <p>
+      Your application has been successfully deployed on <b>EC2</b> with <b>Docker</b> and <b>Nginx</b>.  
+      This dashboard is running inside a containerized environment for reliability and scalability.
+    </p>
+  </div>
+</body>
+</html>
