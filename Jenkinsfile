@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    environment {
+        DOCKER_CONTAINER = "nginx-dashboard"
+    }
+
     stages {
         stage('Checkout') {
             steps {
@@ -10,12 +14,12 @@ pipeline {
 
         stage('Deploy') {
             steps {
-                sh '''
-                sudo rm -rf /usr/share/nginx/html/*
-                sudo cp index.html /usr/share/nginx/html/
-                sudo systemctl reload nginx
-                '''
+                sh """
+                docker cp index.html $DOCKER_CONTAINER:/usr/share/nginx/html/index.html
+                docker exec $DOCKER_CONTAINER nginx -s reload
+                """
             }
         }
     }
 }
+
